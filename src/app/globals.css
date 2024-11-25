@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos-slide {
+    animation: slide 20s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  
+  .logos-slide:hover {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide > div {
+    display: inline-flex;
+    min-width: max-content;
+  }
